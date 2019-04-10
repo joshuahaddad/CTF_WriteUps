@@ -22,8 +22,8 @@ SwampCTF - "Ghidra Release"
 >You: ... [looks at clock. It reads 3:45PM]
 >
 >You: [Mutters to self] No way am I watching all of this: https://static.swampctf.com/ghidra_nsa_training.mp4
-
--= Created by DigitalCold =-`
+>
+>-= Created by DigitalCold =-`
 
 #### Solution
 After downloading the video the first thing I noticed was the massive length (>15 hrs).   Watching for a minute or two revealed the video was scrolling text, suggesting Optical Character Recognition (OCR) would be an ideal solution.  
@@ -35,7 +35,7 @@ $ FILES=./images/*
 $ for f in $FILES; pytesseract >> solve.txt; done;
 ```
 
-Searching the file for "flag" reveals : 
+Searching the file for "flag" reveals :   
 ![Ghidra Image 1](firstImage.jpg)
 
 This shows the images are in the form "FLAG(x/4)" and searching through the rest of the file gives:
