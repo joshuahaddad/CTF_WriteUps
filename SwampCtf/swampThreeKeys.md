@@ -80,12 +80,12 @@ Converting back to ASCII: *flag{w0w_wh4t_l4*.
 **Decrypting on other keys and following same procedure**:  
 Since the above ciphertext is a valid encrypted string, we can use the same C<sub>0</sub> + C<sub>1</sub> + C<sub>0<sub> + C<sub>3</sub> for each key.  
 
-Key 2: 
-P<sub>2</sub> = 90cceb203589b904830c91b4793ce0e2 P<sub>0</sub> = e222b9a8375061ab81d048a65f66d709. 
+Key 2:  
+P<sub>2</sub> = 90cceb203589b904830c91b4793ce0e2 P<sub>0</sub> = e222b9a8375061ab81d048a65f66d709  
 *Key = zy_k3yz_much_w34*
 
 Key 3:  
-P<sub>2</sub> = 6a14b23d37551a4a3eecb3440267a4a8 P<sub>0</sub> = 09dcdcac7f85cc8a0e233d0f1739810a. 
+P<sub>2</sub> = 6a14b23d37551a4a3eecb3440267a4a8 P<sub>0</sub> = 09dcdcac7f85cc8a0e233d0f1739810a  
 *Key = k_crypt0_f41ls!}*
 
 Flag: flag{w0w_wh4t_l4zy_k3yz_much_w34k_crypt0_f41ls!}
