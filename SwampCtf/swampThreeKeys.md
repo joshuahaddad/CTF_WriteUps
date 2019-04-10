@@ -55,7 +55,7 @@ This code uses the key as the IV for encryption.  Along with the ability to gene
 6b1a585f0788db5721bf270cf46f445308970de331a0a2f06fa9ba7a792d04df564337ed2f604008dc6acb88b23787fac23cd794b80b7979e1a32700274ff328  
 
 **Separate blocks**:  
-Load into python string and substring blocks of 16 `block1 = cipher[0:32]`  
+Load into python string and substring blocks of 32 `block1 = cipher[0:32]`  
 C<sub>0</sub> = 6b1a585f0788db5721bf270cf46f4453  
 C<sub>1</sub> = 08970de331a0a2f06fa9ba7a792d04df  
 C<sub>2</sub> = 564337ed2f604008dc6acb88b23787fa  
