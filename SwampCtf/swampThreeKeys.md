@@ -78,7 +78,7 @@ IV = 666c61677b7730775f776834745f6c34.
 Converting back to ASCII: *flag{w0w_wh4t_l4*.  
 
 **Decrypting on other keys and following same procedure**:  
-Since the above ciphertext is a valid encrypted string, we can use the same C<sub>0</sub> + C<sub>1</sub> + C<sub>0<sub> + C<sub>3</sub> for each key.  
+Since the above ciphertext is a valid encrypted string, we can use the same C<sub>0</sub> + C<sub>1</sub> + C<sub>0</sub> + C<sub>3</sub> for each key  
 
 Key 2:  
 P<sub>2</sub> = 90cceb203589b904830c91b4793ce0e2 P<sub>0</sub> = e222b9a8375061ab81d048a65f66d709  
