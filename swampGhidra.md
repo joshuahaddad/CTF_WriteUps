@@ -8,18 +8,27 @@ SwampCTF - "Ghidra Release"
 ##### Challenge Description: 
 
 >[Meanwhile at the NSA on a Friday afternoon]
-Manager: Hey, we're going to be releasing our internal video training for Ghidra and we need you to watch it all to flag any content that needs to be redacted before release.
+
+Manager: Hey, we're going to be releasing our internal video training for Ghidra and we need you to watch it all
+
+to flag any content that needs to be redacted before release.
+
 Manager: The release is next Monday. Hope you didn't have any weekend plans!
+
 You: Uhhh, sure bu-
+
 Manager: Great! Thanks. Make sure nothing gets out.
+
 You: ... [looks at clock. It reads 3:45PM]
+
 You: [Mutters to self] No way am I watching all of this: https://static.swampctf.com/ghidra_nsa_training.mp4
+
 -= Created by DigitalCold =-`
 
 #### Solution
 After downloading the video the first thing I noticed was the massive length (>15 hrs).   Watching for a minute or two revealed the video was scrolling text, suggesting Optical Character Recognition (OCR) would be an ideal solution.  
 Quick googling of OCR suggested video OCR is not well developed, and would be very slow, and the video would have to be converted to images.
-I extracted frames of the video using a tool named Video to Image Converter, but upon reading other writeups ffmpegcould be used: `ffmpeg -i ghidra_nsa_training.mp4 -vf "fps=1" out%0d.png` [credit Ripp3rs](https://ctftime.org/writeup/14500).
+I extracted frames of the video using a tool named Video to Image Converter, but upon reading other writeups ffmpeg could be used: `ffmpeg -i ghidra_nsa_training.mp4 -vf "fps=1" out%0d.png` [credit Ripp3rs](https://ctftime.org/writeup/14500).
 After extracting the images pytesseract can be used to convert the images to a searchable/greppable text file:
 ```
 $ FILES=./images/* 
