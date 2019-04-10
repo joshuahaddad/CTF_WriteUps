@@ -27,7 +27,7 @@ $ for f in $FILES; pytesseract >> solve.txt; done;
 ```
 
 Searching the file for "flag" reveals : 
-![Ghidra Image 1]("https://github.com/joshuahaddad/CTF_WriteUps/blob/master/firstImage.jpg" "Ghidra Image One")
+![Ghidra Image 1]("firstImage.jpg" "Ghidra Image One")
 
 This shows the images are in the form "FLAG(x/4)" and searching through the rest of the file gives:
 Flag 1 flag{l34
