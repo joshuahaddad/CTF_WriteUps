@@ -16,8 +16,8 @@ SwampCTF - "We Three Keys"
 #### _Intro and Given Code_
 This was an interesting crypto challenge which gave the source code to a faulty AES-CBC block cipher encryption service.  The full script is shown [here](add Link).
 #### _AES-CBC Theory_
-![Encrypt](AES_CBC_Encrypt)
-![Decrypt](AES_CBC_Decrypt)
+![Encrypt](AES_CBC_Encrypt.png)
+![Decrypt](AES_CBC_Decrypt.png)
 
 In the encryption, the plaintext is divided into multiple blocks.  The encryption is then as follows:  
 *Let E<sub>K</sub>(X) = AES encryption of X using key K,  
@@ -70,7 +70,7 @@ C<sub>1</sub> = 08970de331a0a2f06fa9ba7a792d04df
 P</sub>0</sub> = 61616161616161616161616161616161  
 P</sub>2</sub> = 0f9a0de52bb6f3e651bfb32f6c13098a  
 
-**Compute P</sub>2</sub> ⊕ C<sub>1</sub> = D</sub>K</sub>(C<sub>0</sub>)**: 
+**Compute P</sub>2</sub> ⊕ C<sub>1</sub> = D</sub>K</sub>(C<sub>0</sub>)**:   
 D<sub>K</sub>(C<sub>0</sub>) = 70d00061a1651163e160955153e0d55. 
 
 **Compute D<sub>K</sub>(C<sub>0</sub>) ⊕ P</sub>0</sub> = IV = Key**:  
