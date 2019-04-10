@@ -39,7 +39,7 @@ P<sub>0</sub> = C<sub>0</sub> ⊕ IV
 Inspection of the main script for encryption and decryption reveals the vulnerability in the code:  
 `encrypt_message(key, key)`  
 Examination of the encryption code also reveals the block length to be 16 bytes:  
-`%16`  
+`val = 16 - (len(msg) % 16)`  
 This code uses the key as the IV for encryption.  Along with the ability to generate ciphertext and decrypt cipher text an attack can be mounted as follows:  
 1) Create a three block (48 byte) plaintext, note C<sub>0</sub> , C<sub>1</sub> , and C<sub>2</sub>  
 2) Modify the ciphertext such that C<sub>0</sub> = C<sub>2</sub> to force D<sub>K</sub>(C<sub>2</sub>) = D<sub>K</sub>(C<sub>0</sub>)  
