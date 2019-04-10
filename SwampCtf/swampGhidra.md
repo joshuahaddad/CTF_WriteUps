@@ -8,12 +8,19 @@ SwampCTF - "Ghidra Release"
 ##### Challenge Description: 
 
 >[Meanwhile at the NSA on a Friday afternoon]
+>
 >Manager: Hey, we're going to be releasing our internal video training for Ghidra and we need you to watch it all
+>
 >to flag any content that needs to be redacted before release.
+>
 >Manager: The release is next Monday. Hope you didn't have any weekend plans!
+>
 >You: Uhhh, sure bu-
+>
 >Manager: Great! Thanks. Make sure nothing gets out.
+>
 >You: ... [looks at clock. It reads 3:45PM]
+>
 >You: [Mutters to self] No way am I watching all of this: https://static.swampctf.com/ghidra_nsa_training.mp4
 
 -= Created by DigitalCold =-`
