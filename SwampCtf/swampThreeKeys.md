@@ -41,7 +41,7 @@ Inspection of the main script for encryption and decryption reveals the vulnerab
 Examination of the encryption code also reveals the block length to be 16 bytes:  
 `%16`  
 This code uses the key as the IV for encryption.  Along with the ability to generate ciphertext and decrypt cipher text an attack can be mounted as follows:  
-1) Create a three block (48 byte) plaintext, note C<sub>0</sub> , C<sub>1<//sub> , and C<sub>2</sub>  
+1) Create a three block (48 byte) plaintext, note C<sub>0</sub> , C<sub>1</sub> , and C<sub>2</sub>  
 2) Modify the ciphertext such that C<sub>0</sub> = C<sub>2</sub> to force D<sub>K</sub>(C<sub>2</sub>) = D<sub>K</sub>(C<sub>0</sub>)  
 3) Decrypt modified plaintext to obtain P<sub>0</sub>, P<sub>2</sub>, P<sub>2</sub> for the modified block  
 4) Compute D<sub>K</sub>(C<sub>0</sub>) using P</sub>2</sub> = D<sub>K</sub>(C<sub>2</sub>) ⊕ C<sub>1</sub> ⇒  P<sub>2</sub> ⊕  C<sub>1</sub> = D<sub>K</sub>(C<sub>2</sub>)  
