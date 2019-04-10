@@ -24,8 +24,8 @@ In the encryption, the plaintext is divided into multiple blocks.  The encryptio
 B<sub>i</sub> = the ith block,  
  C<sub>i</sub> = the ith resultant ciphertext*  
  
-E<sub>K<sub>(IV ⊕ B</sub>0</sub>) = C<sub>0</sub>  
-E<sub>K<sub>(C<sub>i-1</sub> ⊕ B</sub>i</sub>) = C<sub>i</sub>  
+E<sub>K</sub>(IV ⊕ B</sub>0</sub>) = C<sub>0</sub>  
+E<sub>K</sub>(C<sub>i-1</sub> ⊕ B</sub>i</sub>) = C<sub>i</sub>  
 
 Decryption follows a similar pattern:  
 *Let D<sub>K</sub>(X) = AES decryption of X using key K,  
@@ -36,7 +36,8 @@ P<sub>i</sub> = D<sub>K</sub>(C<sub>i</sub>) ⊕ C<sub>i-1</sub>
 P<sub>0</sub> = C<sub>0</sub> ⊕ IV  
 
 #### _Key=IV Attack_  
-Inspection of the main script for encryption and decryption reveals the vulnerability in the code: `encrypt_message(key, key)`  
+Inspection of the main script for encryption and decryption reveals the vulnerability in the code:  
+`encrypt_message(key, key)`  
 Examination of the encryption code also reveals the block length to be 16 bytes:  
 `%16`  
 This code uses the key as the IV for encryption.  Along with the ability to generate ciphertext and decrypt cipher text an attack can be mounted as follows:  
@@ -72,9 +73,9 @@ P</sub>2</sub> = 0f9a0de52bb6f3e651bfb32f6c13098a
 **Compute P</sub>2</sub> ⊕ C<sub>1</sub> = D</sub>K</sub>(C<sub>0</sub>)**: 
 D<sub>K</sub>(C<sub>0</sub>) = 70d00061a1651163e160955153e0d55. 
 
-**Compute D<sub>K</sub>(C<sub>0</sub>) ⊕ P</sub>0</sub> = IV = Key**
+**Compute D<sub>K</sub>(C<sub>0</sub>) ⊕ P</sub>0</sub> = IV = Key**:  
 IV = 666c61677b7730775f776834745f6c34. 
-Converting back to ASCII: *flag{w0w_wh4t_l4*. 
+Converting back to ASCII: *flag{w0w_wh4t_l4*.  
 
 **Decrypting on other keys and following same procedure**:  
 Since the above ciphertext is a valid encrypted string, we can use the same C<sub>0</sub> + C<sub>1</sub> + C<sub>0<sub> + C<sub>3</sub> for each key.  
