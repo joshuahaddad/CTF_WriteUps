@@ -14,7 +14,7 @@ SwampCTF - "We Three Keys"
 
 ### Solution
 #### _Intro and Given Code_
-This was an interesting crypto challenge which gave the source code to a faulty AES-CBC block cipher encryption service.  The full script is shown [here](add Link).
+This was an interesting crypto challenge which gave the source code to a faulty AES-CBC block cipher encryption service.  The full script is shown [here](https://github.com/joshuahaddad/CTF_WriteUps/blob/master/SwampCtf/serv.py).
 #### _AES-CBC Theory_
 ![Encrypt](AES_CBC_Encrypt.png)
 ![Decrypt](AES_CBC_Decrypt.png)
