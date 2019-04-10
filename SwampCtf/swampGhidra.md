@@ -38,9 +38,9 @@ $ for f in $FILES; pytesseract >> solve.txt; done;
 Searching the file for "flag" reveals :   
 ![Ghidra Image 1](firstImage.jpg)
 
-This shows the images are in the form "FLAG(x/4)" and searching through the rest of the file gives:
-Flag 1 flag{l34
-Flag 2 kfr33_n4
-Flag 3 tion4l_s
-Flag 4 3cur1ty}
+This shows the images are in the form "FLAG(x/4)" and searching through the rest of the file gives:  
+Flag 1 flag{l34  
+Flag 2 kfr33_n4  
+Flag 3 tion4l_s  
+Flag 4 3cur1ty}  
 Complete Flag: flag{l34kfr33_n4tion4l_s3cur1ty}
